@@ -5,6 +5,7 @@
 
 一个可自定义view和button数量的alertview，参考自一个开源项目，找不到了，等找到再补上
 
+![screenshots](https://github.com/ulongx/mpalertview/blob/master/screenshots_1.gif?raw=true)
 ## 示例
  暂无
  
