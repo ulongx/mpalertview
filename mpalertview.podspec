@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "mpalertview"
-  s.version      = "0.0.1"
+  s.version      = "0.0.2"
   s.summary      = "一个可自定义view和button数量的alertview"
 
   # This description is used to generate tags and improve search results.

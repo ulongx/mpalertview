@@ -222,8 +222,8 @@ CGFloat buttonSpacerWidth  = 0;
 }
 
 - (void)dialogButtonTouchUpInside: (mpalertview *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
-    NSLog(@"点击了按钮 %d, %d", (int)buttonIndex, (int)[alertView tag]);
-    [self close];
+//    NSLog(@"点击了按钮 %d, %d", (int)buttonIndex, (int)[alertView tag]);
+//    [self close];
 }
 
 #pragma mark - button layer 指定圆角
