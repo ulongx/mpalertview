@@ -33,9 +33,9 @@ $ pod install
 ...
 
 mpalertview *aview = [[mpalertview alloc]init];
-//定义按钮组
+//定义按钮组，可以多个，最好不要超过3个，否则布局不好看
 aview.buttonTitles = @[@{@"title":@"取消",@"titleColor":[UIColor whiteColor],@"bgColor":[UIColor greenColor]}
-                           ,@{@"title":@"创建队伍",@"titleColor":[UIColor whiteColor],@"bgColor":[UIColor greenColor]}];
+                      ,@{@"title":@"确定",@"titleColor":[UIColor whiteColor],@"bgColor":[UIColor greenColor]}];
 aview.bodyMessage = @"是否删除？";
 [aview setOnButtonTouchUpInside:^(mpalertview *alertView, int buttonIndex) {
     if (buttonIndex == 0) {
@@ -46,5 +46,28 @@ aview.bodyMessage = @"是否删除？";
     [alertView close];
 }];
 [aview show];
+...
+```
+### 添加自定义view
+``` objective-c
+#import <mpalertview/mpalertview.h>
+...
 
+UIView *cusview = [UIView new];
+...
+mpalertview *aview = [[mpalertview alloc]init];
+//定义按钮组，可以多个，最好不要超过3个，否则布局不好看
+aview.buttonTitles = @[@{@"title":@"取消",@"titleColor":[UIColor whiteColor],@"bgColor":[UIColor greenColor]}
+                     ,@{@"title":@"确定",@"titleColor":[UIColor whiteColor],@"bgColor":[UIColor greenColor]}];
+aview.containerView = cusview; //把自定义的view，set进去
+[aview setOnButtonTouchUpInside:^(mpalertview *alertView, int buttonIndex) {
+    if (buttonIndex == 0) {
+        NSLog(@"点击了第一个按钮");
+    }else{
+        NSLog(@"点击了第二个按钮");
+    }
+    [alertView close];
+}];
+[aview show];
+...
 ```
